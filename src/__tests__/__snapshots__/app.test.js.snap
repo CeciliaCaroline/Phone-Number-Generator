@@ -21,7 +21,7 @@ exports[`App renders correctly 1`] = `
           </h3>
         </div>
         <div
-          className="MuiGrid-container-1 MuiGrid-justify-xs-center-18"
+          className="MuiGrid-container-1"
         >
           <div
             className="MuiGrid-item-2 MuiGrid-grid-xs-8-37"
@@ -81,22 +81,12 @@ exports[`App renders correctly 1`] = `
         <div
           className="MuiGrid-container-1 MuiGrid-justify-xs-center-18"
         >
-          
-        </div>
-        <div
-          className="MuiGrid-container-1 MuiGrid-justify-xs-center-18"
-        >
-          
-        </div>
-        <div
-          className="MuiGrid-container-1 MuiGrid-justify-xs-center-18"
-        >
           <br />
           <span />
           <br />
         </div>
         <div
-          className="MuiGrid-container-1 MuiGrid-justify-xs-center-18"
+          className="MuiGrid-container-1 MuiGrid-align-items-xs-center-9"
         >
           <div
             className="MuiGrid-item-2 MuiGrid-grid-xs-6-35"
@@ -165,49 +155,80 @@ exports[`App renders correctly 1`] = `
             </div>
           </div>
           <div
-            className="MuiGrid-item-2 MuiGrid-grid-xs-6-35"
+            className="MuiGrid-item-2 MuiGrid-grid-xs-3-32"
           >
-            <span
-              style={
-                Object {
-                  "display": "inline-block",
-                  "padding": "1%",
-                  "width": "auto",
-                }
-              }
-            >
-              Max: 
-              0
-            </span>
-            <span
-              style={
-                Object {
-                  "display": "inline-block",
-                  "padding": "1%",
-                  "width": "auto",
-                }
-              }
-            >
-              Min: 
-              0
-            </span>
-            <span
-              style={
-                Object {
-                  "display": "inline-block",
-                  "padding": "1%",
-                  "width": "auto",
-                }
-              }
-            >
-              Total: 
-              0
-            </span>
+            
+          </div>
+          <div
+            className="MuiGrid-item-2 MuiGrid-grid-xs-3-32"
+          >
+            
           </div>
         </div>
         <div
-          className="MuiGrid-container-1 MuiGrid-justify-xs-center-18"
-        />
+          className="MuiGrid-container-1"
+        >
+          <div
+            className="MuiGrid-item-2 MuiGrid-grid-xs-6-35"
+          >
+            <p
+              style={
+                Object {
+                  "display": "inline-block",
+                  "padding": "1%",
+                  "width": "auto",
+                }
+              }
+            >
+              <b>
+                Max: 
+              </b>
+               
+              0
+            </p>
+            <p
+              style={
+                Object {
+                  "display": "inline-block",
+                  "padding": "1%",
+                  "width": "auto",
+                }
+              }
+            >
+              <b>
+                Min: 
+              </b>
+               
+              0
+            </p>
+            <p
+              style={
+                Object {
+                  "display": "inline-block",
+                  "padding": "1%",
+                  "width": "auto",
+                }
+              }
+            >
+              <b>
+                Total: 
+              </b>
+               
+              0
+            </p>
+          </div>
+        </div>
+        <div
+          className="MuiGrid-container-1"
+        >
+          <table
+            className="MuiTable-root-226"
+          >
+            <tbody
+              className="MuiTableBody-root-227"
+            />
+          </table>
+        </div>
       </div>
     </div>
   </div>

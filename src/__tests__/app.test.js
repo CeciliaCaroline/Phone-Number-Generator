@@ -20,7 +20,7 @@ describe("App", () => {
 
   it("it renders the app component", () => {
     const wrapper = render(<App />);
-    expect(wrapper.find("div").length).toEqual(20);
+    expect(wrapper.find("div").length).toEqual(21);
   });
 
   it("renders without crashing", () => {
