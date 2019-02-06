@@ -9,6 +9,8 @@ import saveAs from "file-saver";
 
 import Grid from "@material-ui/core/Grid";
 import Paper from "@material-ui/core/Paper";
+import Table from "@material-ui/core/Table";
+import TableBody from "@material-ui/core/TableBody";
 import TableCell from "@material-ui/core/TableCell";
 import TableRow from "@material-ui/core/TableRow";
 import './app.css'
@@ -176,22 +178,6 @@ class App extends Component {
             />
           </Grid>
         </Grid>
-
-        <Grid container >
-        {/* <Grid item xs={3}>
-        <DownLoadButton
-            onClick={this.downloadNumbers}
-            randomPhoneNumbers={randomPhoneNumbers}
-          />
-        </Grid>
-        <Grid item xs={3} >
-          <ClearButton
-            onClick={this.clearNumbers}
-            randomPhoneNumbers={randomPhoneNumbers}
-          />
-        </Grid> */}
-          
-        </Grid>
         
         <Grid container justify="center">
           <br />
@@ -224,11 +210,11 @@ class App extends Component {
         </Grid>
 
         <Grid container >
-        {/* <Table>
-          <TableBody> */}
+        <Table>
+          <TableBody>
 {this.renderPhoneNumbers()}
-          {/* </TableBody>
-        </Table> */}
+          </TableBody>
+        </Table>
         </Grid>
         </div>
         </Paper>

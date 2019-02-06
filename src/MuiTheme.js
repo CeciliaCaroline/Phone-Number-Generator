@@ -14,7 +14,8 @@ const theme = createMuiTheme({
   },
   typography: {
     fontSize: 10,
-    htmlFontSize: 9
+    htmlFontSize: 9,
+    fontFamily: "serif"
   },
   overrides: {
     
