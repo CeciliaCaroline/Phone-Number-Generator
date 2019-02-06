@@ -4,7 +4,7 @@ import App from "../components/App";
 import { render, shallow} from "enzyme";
 import Adapter from "enzyme-adapter-react-16";
 import renderer from "react-test-renderer";
-import saveAs from "file-saver";
+// import saveAs from "file-saver";
 
 import { configure } from "enzyme";
 

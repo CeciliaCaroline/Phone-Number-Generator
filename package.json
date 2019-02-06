@@ -16,8 +16,15 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test",
+    "test": "react-scripts test  --env=jsdom --coverage --collectCoverageFrom=src/**/*.js? --collectCoverageFrom=[!src/index.js]",
     "eject": "react-scripts eject"
+  },
+  "jest": {
+    "collectCoverageFrom": [
+      "src/**/*.{js,jsx,ts,tsx}",
+      "!<rootDir>/node_modules/",
+      "!src/index.js/"
+    ]
   },
   "eslintConfig": {
     "extends": "react-app"

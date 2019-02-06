@@ -48,7 +48,6 @@ class App extends Component {
       randomPhoneNumbers: uniqueNumber,
       generatedNumbers: generatedNumbers.concat(uniqueNumber)
     });
-    // this.setCounterValues();
   };
 
   renderPhoneNumbers = () => {
@@ -113,19 +112,6 @@ class App extends Component {
       this.setState({ generateNumber: event.target.value });
     }
   };
-
-  // setCounterValues = () => {
-  //   const { generatedNumbers } = this.state;
-  //   console.log(this.state, 'nnnnnnn')
-  //   if (generatedNumbers.length > 0) {
-  //     console.log('ddddd')
-  //     this.setState({
-  //       min: Math.min(...generatedNumbers),
-  //       max: Math.max(...generatedNumbers),
-  //       total: generatedNumbers.length
-  //     });
-  //   }
-  // };
 
   setSort = event => {
     event.preventDefault();
