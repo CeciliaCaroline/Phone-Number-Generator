@@ -29,7 +29,7 @@ class App extends Component {
     let uniqueNumber;
     const { generatedNumbers, generateNumber } = this.state;
 
-    if (generateNumber <= 0 || generateNumber <= 10000) {
+    if (generateNumber <= 0 || generateNumber > 10000) {
       this.setState({ error: "Input is above or below limit" });
     }
 
@@ -161,7 +161,7 @@ class App extends Component {
         <Grid container justify="center">
           <h3>Random Phone Number Generator</h3>
         </Grid>
-        <Grid container justify="center">
+        <Grid container >
           <Grid item xs={8}>
             <GeneratorInput
               onChange={this.numberInputChange}
@@ -177,33 +177,53 @@ class App extends Component {
           </Grid>
         </Grid>
 
-        <Grid container justify="center">
-          <DownLoadButton
+        <Grid container >
+        {/* <Grid item xs={3}>
+        <DownLoadButton
             onClick={this.downloadNumbers}
             randomPhoneNumbers={randomPhoneNumbers}
           />
         </Grid>
-        <Grid container justify="center">
+        <Grid item xs={3} >
           <ClearButton
             onClick={this.clearNumbers}
             randomPhoneNumbers={randomPhoneNumbers}
           />
+        </Grid> */}
+          
         </Grid>
+        
         <Grid container justify="center">
           <br />
           <span>{error}</span>
           <br />
         </Grid>
-        <Grid container justify="center">
+        <Grid container alignItems="center">
           <Grid item xs={6}>
             <Sorting sorted={sort} onChange={this.setSort} />
           </Grid>
-          <Grid item xs={6}>
+          <Grid item xs={3}>
+        <DownLoadButton
+            onClick={this.downloadNumbers}
+            randomPhoneNumbers={randomPhoneNumbers}
+          />
+        </Grid>
+        <Grid item xs={3} >
+          <ClearButton
+            onClick={this.clearNumbers}
+            randomPhoneNumbers={randomPhoneNumbers}
+          />
+        </Grid>
+          
+        </Grid>
+        <Grid container>
+        <Grid item xs={6}>
             <Counter min={min} max={max} total={total} />
           </Grid>
+         
         </Grid>
 
-        <Grid container justify="center">
+        <Grid container >
         {/* <Table>
           <TableBody> */}
 {this.renderPhoneNumbers()}

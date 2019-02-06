@@ -3,15 +3,15 @@ import React , {Fragment} from 'react';
 const Counter = (props) => {
     return (
         <Fragment>
-          <span style={{ display: "inline-block", width: "auto", padding: "1%" }}>
-            Max: {props.max}
-          </span>
-          <span style={{ display: "inline-block", width: "auto", padding: "1%" }}>
-            Min: {props.min}
-          </span>
-          <span style={{ display: "inline-block", width: "auto", padding: "1%" }}>
-            Total: {props.total}
-          </span>
+          <p style={{ display: "inline-block", width: "auto", padding: "1%" }}>
+            <b>Max: </b> {props.max}
+          </p>
+          <p style={{ display: "inline-block", width: "auto", padding: "1%" }}>
+            <b>Min: </b> {props.min}
+          </p>
+          <p style={{ display: "inline-block", width: "auto", padding: "1%" }}>
+            <b>Total: </b> {props.total}
+          </p>
           
 
         </Fragment>
