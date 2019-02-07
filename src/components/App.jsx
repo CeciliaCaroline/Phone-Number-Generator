@@ -184,7 +184,7 @@ class App extends Component {
                 </Grid>
               </Grid>
               <Grid container>
-                <Grid item xs={6}>
+                <Grid item xs={12}>
                   <Counter min={min} max={max} total={total} />
                 </Grid>
               </Grid>
