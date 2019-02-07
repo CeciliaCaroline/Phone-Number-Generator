@@ -51,8 +51,8 @@ class App extends Component {
   };
 
   renderPhoneNumbers = () => {
-    const { randomPhoneNumbers, generateNumber } = this.state;
-    if (randomPhoneNumbers && generateNumber > 0) {
+    const { randomPhoneNumbers} = this.state;
+    if (randomPhoneNumbers ) {
       return randomPhoneNumbers.map((UniqueNumber, id) => {
         return (
           <TableRow key={id}>
