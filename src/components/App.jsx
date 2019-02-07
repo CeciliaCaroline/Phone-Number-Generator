@@ -145,8 +145,8 @@ class App extends Component {
               <Grid container justify="center">
                 <h3>Random Phone Number Generator</h3>
               </Grid>
-              <Grid container>
-                <Grid item xs={8}>
+              <Grid container justify='space-evenly'>
+                <Grid item xs={9}>
                   <GeneratorInput
                     onChange={this.numberInputChange}
                     input={generateNumber}
@@ -166,11 +166,11 @@ class App extends Component {
                 <span>{error}</span>
                 <br />
               </Grid>
-              <Grid container alignItems="center">
-                <Grid item xs={6}>
+              <Grid container  alignItems="center">
+                <Grid item xs={7}>
                   <Sorting sorted={sort} onChange={this.setSort} />
                 </Grid>
-                <Grid item xs={3}>
+                <Grid item xs={2}>
                   <DownLoadButton
                     onClick={this.downloadNumbers}
                     randomPhoneNumbers={randomPhoneNumbers}
