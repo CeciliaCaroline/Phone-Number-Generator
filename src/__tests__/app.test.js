@@ -45,7 +45,7 @@ describe("App", () => {
     expect(appWrapper.state().generateNumber).toBe(20);
   });
 
-  it("input value beyond limit", () => {
+  it("input value below limit", () => {
     const event = {
       target: {
         value: -1
