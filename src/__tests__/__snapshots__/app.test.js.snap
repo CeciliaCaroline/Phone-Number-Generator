@@ -186,7 +186,7 @@ exports[`App renders correctly 1`] = `
                 Max: 
               </b>
                
-              0
+              00
             </p>
             <p
               style={
@@ -201,7 +201,7 @@ exports[`App renders correctly 1`] = `
                 Min: 
               </b>
                
-              0
+              00
             </p>
             <p
               style={

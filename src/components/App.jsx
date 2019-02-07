@@ -26,7 +26,7 @@ class App extends Component {
     total: null,
     error: null
   };
-  randomGenerator = () => {
+  randomGenerator = async () => {
     let Generated = new Set();
     let uniqueNumber;
     const { generatedNumbers, generateNumber } = this.state;
@@ -37,7 +37,7 @@ class App extends Component {
 
     while (Generated.size < generateNumber) {
       let randomNumber =
-        Math.floor(Math.random() * 9999999999 + 100000000) + 100000000;
+       await Math.floor(Math.random() * 9999999999 + 100000000) + 100000000;
 
       if (String(randomNumber).length === 9) {
         Generated.add(`0${randomNumber}`);
