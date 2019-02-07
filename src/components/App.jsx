@@ -13,7 +13,7 @@ import Table from "@material-ui/core/Table";
 import TableBody from "@material-ui/core/TableBody";
 import TableCell from "@material-ui/core/TableCell";
 import TableRow from "@material-ui/core/TableRow";
-import './app.css'
+import "./app.css";
 
 class App extends Component {
   state = {
@@ -101,8 +101,6 @@ class App extends Component {
     }
   };
 
-
-
   clearNumbers = () => {
     this.setState({ randomPhoneNumbers: [], generateNumber: "" });
   };
@@ -115,9 +113,7 @@ class App extends Component {
 
   setSort = event => {
     event.preventDefault();
-    this.setState({ sort: event.target.value },
-      () => this.sortGenerated());
-    
+    this.setState({ sort: event.target.value }, () => this.sortGenerated());
   };
 
   render() {
@@ -142,68 +138,64 @@ class App extends Component {
     }
 
     return (
-      <Grid container justify="center" >
-      <Grid item xs={11} >
-       <Paper elevation={24}>
-       <div className="container">
-        <Grid container justify="center">
-          <h3>Random Phone Number Generator</h3>
-        </Grid>
-        <Grid container >
-          <Grid item xs={8}>
-            <GeneratorInput
-              onChange={this.numberInputChange}
-              input={generateNumber}
-            />
-          </Grid>
+      <Grid container justify="center">
+        <Grid item xs={11}>
+          <Paper elevation={24}>
+            <div className="container">
+              <Grid container justify="center">
+                <h3>Random Phone Number Generator</h3>
+              </Grid>
+              <Grid container>
+                <Grid item xs={8}>
+                  <GeneratorInput
+                    onChange={this.numberInputChange}
+                    input={generateNumber}
+                  />
+                </Grid>
 
-          <Grid item xs={3}>
-            <GeneratorButton
-              length={generateNumber}
-              onClick={this.randomGenerator}
-            />
-          </Grid>
-        </Grid>
-        
-        <Grid container justify="center">
-          <br />
-          <span>{error}</span>
-          <br />
-        </Grid>
-        <Grid container alignItems="center">
-          <Grid item xs={6}>
-            <Sorting sorted={sort} onChange={this.setSort} />
-          </Grid>
-          <Grid item xs={3}>
-        <DownLoadButton
-            onClick={this.downloadNumbers}
-            randomPhoneNumbers={randomPhoneNumbers}
-          />
-        </Grid>
-        <Grid item xs={3} >
-          <ClearButton
-            onClick={this.clearNumbers}
-            randomPhoneNumbers={randomPhoneNumbers}
-          />
-        </Grid>
-          
-        </Grid>
-        <Grid container>
-        <Grid item xs={6}>
-            <Counter min={min} max={max} total={total} />
-          </Grid>
-         
-        </Grid>
+                <Grid item xs={3}>
+                  <GeneratorButton
+                    length={generateNumber}
+                    onClick={this.randomGenerator}
+                  />
+                </Grid>
+              </Grid>
 
-        <Grid container >
-        <Table>
-          <TableBody>
-{this.renderPhoneNumbers()}
-          </TableBody>
-        </Table>
-        </Grid>
-        </div>
-        </Paper>
+              <Grid container justify="center">
+                <br />
+                <span>{error}</span>
+                <br />
+              </Grid>
+              <Grid container alignItems="center">
+                <Grid item xs={6}>
+                  <Sorting sorted={sort} onChange={this.setSort} />
+                </Grid>
+                <Grid item xs={3}>
+                  <DownLoadButton
+                    onClick={this.downloadNumbers}
+                    randomPhoneNumbers={randomPhoneNumbers}
+                  />
+                </Grid>
+                <Grid item xs={3}>
+                  <ClearButton
+                    onClick={this.clearNumbers}
+                    randomPhoneNumbers={randomPhoneNumbers}
+                  />
+                </Grid>
+              </Grid>
+              <Grid container>
+                <Grid item xs={6}>
+                  <Counter min={min} max={max} total={total} />
+                </Grid>
+              </Grid>
+
+              <Grid container justify="flex-start">
+                <Table>
+                  <TableBody>{this.renderPhoneNumbers()}</TableBody>
+                </Table>
+              </Grid>
+            </div>
+          </Paper>
         </Grid>
       </Grid>
     );

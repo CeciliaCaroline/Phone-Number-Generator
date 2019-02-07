@@ -15,7 +15,7 @@ const theme = createMuiTheme({
   typography: {
     fontSize: 10,
     htmlFontSize: 9,
-    fontFamily: "serif"
+    fontFamily: "Arial"
   },
   overrides: {
     
@@ -66,14 +66,11 @@ const theme = createMuiTheme({
         padding: "none",
         textAlign: "center"
       },
-      head: {
-        backgroundColor: "#3F3F41", // gray
-        color: "white"
-      },
+     
       body: {
         fontSize: 21,
         whiteSpace: "nowrap",
-        backgroundColor: "lightgray"
+        backgroundColor: "rgba(167, 116, 209, 0.43)"
       }
     }
   }

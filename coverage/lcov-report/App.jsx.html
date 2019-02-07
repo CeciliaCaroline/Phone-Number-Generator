@@ -35,9 +35,9 @@
         <span class='fraction'>11/12</span>
       </div>
       <div class='fl pad1y space-right2'>
-        <span class="strong">93.02% </span>
+        <span class="strong">92.86% </span>
         <span class="quiet">Lines</span>
-        <span class='fraction'>40/43</span>
+        <span class='fraction'>39/42</span>
       </div>
     </div>
   </div>
@@ -248,15 +248,7 @@
 203
 204
 205
-206
-207
-208
-209
-210
-211
-212
-213
-214</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+206</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -360,8 +352,6 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -374,8 +364,6 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -400,10 +388,6 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">26x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -484,7 +468,7 @@ import Table from "@material-ui/core/Table";
 import TableBody from "@material-ui/core/TableBody";
 import TableCell from "@material-ui/core/TableCell";
 import TableRow from "@material-ui/core/TableRow";
-import './app.css'
+import "./app.css";
 &nbsp;
 class App extends Component {
   state = {
@@ -572,8 +556,6 @@ class App extends Component {
     }
   };
 &nbsp;
-&nbsp;
-&nbsp;
   clearNumbers = () =&gt; {
     this.setState({ randomPhoneNumbers: [], generateNumber: "" });
   };
@@ -586,9 +568,7 @@ class App extends Component {
 &nbsp;
   setSort = event =&gt; {
     event.preventDefault();
-    this.setState({ sort: event.target.value },
-      () =&gt; this.sortGenerated());
-    
+    this.setState({ sort: event.target.value }, () =&gt; this.sortGenerated());
   };
 &nbsp;
   render() {
@@ -613,68 +593,64 @@ class App extends Component {
     }
 &nbsp;
     return (
-      &lt;Grid container justify="center" &gt;
-      &lt;Grid item xs={11} &gt;
-       &lt;Paper elevation={24}&gt;
-       &lt;div className="container"&gt;
-        &lt;Grid container justify="center"&gt;
-          &lt;h3&gt;Random Phone Number Generator&lt;/h3&gt;
-        &lt;/Grid&gt;
-        &lt;Grid container &gt;
-          &lt;Grid item xs={8}&gt;
-            &lt;GeneratorInput
-              onChange={this.numberInputChange}
-              input={generateNumber}
-            /&gt;
-          &lt;/Grid&gt;
+      &lt;Grid container justify="center"&gt;
+        &lt;Grid item xs={11}&gt;
+          &lt;Paper elevation={24}&gt;
+            &lt;div className="container"&gt;
+              &lt;Grid container justify="center"&gt;
+                &lt;h3&gt;Random Phone Number Generator&lt;/h3&gt;
+              &lt;/Grid&gt;
+              &lt;Grid container&gt;
+                &lt;Grid item xs={8}&gt;
+                  &lt;GeneratorInput
+                    onChange={this.numberInputChange}
+                    input={generateNumber}
+                  /&gt;
+                &lt;/Grid&gt;
 &nbsp;
-          &lt;Grid item xs={3}&gt;
-            &lt;GeneratorButton
-              length={generateNumber}
-              onClick={this.randomGenerator}
-            /&gt;
-          &lt;/Grid&gt;
-        &lt;/Grid&gt;
-        
-        &lt;Grid container justify="center"&gt;
-          &lt;br /&gt;
-          &lt;span&gt;{error}&lt;/span&gt;
-          &lt;br /&gt;
-        &lt;/Grid&gt;
-        &lt;Grid container alignItems="center"&gt;
-          &lt;Grid item xs={6}&gt;
-            &lt;Sorting sorted={sort} onChange={this.setSort} /&gt;
-          &lt;/Grid&gt;
-          &lt;Grid item xs={3}&gt;
-        &lt;DownLoadButton
-            onClick={this.downloadNumbers}
-            randomPhoneNumbers={randomPhoneNumbers}
-          /&gt;
-        &lt;/Grid&gt;
-        &lt;Grid item xs={3} &gt;
-          &lt;ClearButton
-            onClick={this.clearNumbers}
-            randomPhoneNumbers={randomPhoneNumbers}
-          /&gt;
-        &lt;/Grid&gt;
-          
-        &lt;/Grid&gt;
-        &lt;Grid container&gt;
-        &lt;Grid item xs={6}&gt;
-            &lt;Counter min={min} max={max} total={total} /&gt;
-          &lt;/Grid&gt;
-         
-        &lt;/Grid&gt;
+                &lt;Grid item xs={3}&gt;
+                  &lt;GeneratorButton
+                    length={generateNumber}
+                    onClick={this.randomGenerator}
+                  /&gt;
+                &lt;/Grid&gt;
+              &lt;/Grid&gt;
 &nbsp;
-        &lt;Grid container &gt;
-        &lt;Table&gt;
-          &lt;TableBody&gt;
-{this.renderPhoneNumbers()}
-          &lt;/TableBody&gt;
-        &lt;/Table&gt;
-        &lt;/Grid&gt;
-        &lt;/div&gt;
-        &lt;/Paper&gt;
+              &lt;Grid container justify="center"&gt;
+                &lt;br /&gt;
+                &lt;span&gt;{error}&lt;/span&gt;
+                &lt;br /&gt;
+              &lt;/Grid&gt;
+              &lt;Grid container alignItems="center"&gt;
+                &lt;Grid item xs={6}&gt;
+                  &lt;Sorting sorted={sort} onChange={this.setSort} /&gt;
+                &lt;/Grid&gt;
+                &lt;Grid item xs={3}&gt;
+                  &lt;DownLoadButton
+                    onClick={this.downloadNumbers}
+                    randomPhoneNumbers={randomPhoneNumbers}
+                  /&gt;
+                &lt;/Grid&gt;
+                &lt;Grid item xs={3}&gt;
+                  &lt;ClearButton
+                    onClick={this.clearNumbers}
+                    randomPhoneNumbers={randomPhoneNumbers}
+                  /&gt;
+                &lt;/Grid&gt;
+              &lt;/Grid&gt;
+              &lt;Grid container&gt;
+                &lt;Grid item xs={6}&gt;
+                  &lt;Counter min={min} max={max} total={total} /&gt;
+                &lt;/Grid&gt;
+              &lt;/Grid&gt;
+&nbsp;
+              &lt;Grid container justify="flex-start"&gt;
+                &lt;Table&gt;
+                  &lt;TableBody&gt;{this.renderPhoneNumbers()}&lt;/TableBody&gt;
+                &lt;/Table&gt;
+              &lt;/Grid&gt;
+            &lt;/div&gt;
+          &lt;/Paper&gt;
         &lt;/Grid&gt;
       &lt;/Grid&gt;
     );
@@ -688,7 +664,7 @@ export default App;
 </div><!-- /wrapper -->
 <div class='footer quiet pad2 space-top1 center small'>
   Code coverage
-  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Wed Feb 06 2019 18:17:58 GMT+0300 (EAT)
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Thu Feb 07 2019 11:37:31 GMT+0300 (EAT)
 </div>
 </div>
 <script src="prettify.js"></script>
