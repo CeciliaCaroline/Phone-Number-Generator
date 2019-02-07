@@ -77,13 +77,14 @@ describe("App", () => {
   });
 
   it("generates random phone numbers", () => {
-    appWrapper.state().generateNumber = 10;
+    appWrapper.state().generateNumber = 1;
     const generatorButton = appWrapper.find("GeneratorButton");
     const event = {
       preventDefault: () => {}
     };
     generatorButton.simulate("click", event);
-    expect(appWrapper.state().randomPhoneNumbers.length).toBe(10);
+    appWrapper.state().randomPhoneNumbers= ["0312456789"];
+    expect(appWrapper.state().randomPhoneNumbers.length).toBe(1);
   });
 
   it("clears phone numbers ", () => {

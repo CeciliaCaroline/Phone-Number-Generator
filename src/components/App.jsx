@@ -109,7 +109,6 @@ class App extends Component {
     if (event.target.value <= 10000 && event.target.value >0 ) {
       this.setState({ generateNumber: event.target.value });
     } else {
-      console.log('errrrr')
       this.setState({ error: "Input is above or below limit", generateNumber: event.target.value });
     }
   };
