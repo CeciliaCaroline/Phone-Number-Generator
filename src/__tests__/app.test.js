@@ -45,6 +45,23 @@ describe("App", () => {
     expect(appWrapper.state().generateNumber).toBe(20);
   });
 
+  it("input value beyond limit", () => {
+    const event = {
+      target: {
+        value: -1
+      }
+    };
+
+    // const inputField = appInstance
+    // const generatorInput = appWrapper.find("GeneratorInput");
+    appInstance.numberInputChange(event)
+    expect(appWrapper.state().generateNumber).toEqual(-1);
+    expect(appWrapper.state().error).toBe("Input is above or below limit");
+
+
+
+  })
+
   it("set error when input beyond limit", () => {
     let appWrapper = shallow(<App />);
     appWrapper.state().generateNumber = 15000;

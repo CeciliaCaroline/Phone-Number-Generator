@@ -21,10 +21,10 @@ exports[`App renders correctly 1`] = `
           </h3>
         </div>
         <div
-          className="MuiGrid-container-1"
+          className="MuiGrid-container-1 MuiGrid-justify-xs-space-evenly-22"
         >
           <div
-            className="MuiGrid-item-2 MuiGrid-grid-xs-8-37"
+            className="MuiGrid-item-2 MuiGrid-grid-xs-9-38"
           >
             <div
               className="MuiFormControl-root-125 MuiFormControl-fullWidth-128"
@@ -79,17 +79,19 @@ exports[`App renders correctly 1`] = `
           </div>
         </div>
         <div
-          className="MuiGrid-container-1 MuiGrid-justify-xs-center-18"
+          className="MuiGrid-container-1"
         >
           <br />
-          <span />
+          <span
+            className="error"
+          />
           <br />
         </div>
         <div
           className="MuiGrid-container-1 MuiGrid-align-items-xs-center-9"
         >
           <div
-            className="MuiGrid-item-2 MuiGrid-grid-xs-6-35"
+            className="MuiGrid-item-2 MuiGrid-grid-xs-7-36"
           >
             <div
               className="MuiFormControl-root-125"
@@ -155,7 +157,7 @@ exports[`App renders correctly 1`] = `
             </div>
           </div>
           <div
-            className="MuiGrid-item-2 MuiGrid-grid-xs-3-32"
+            className="MuiGrid-item-2 MuiGrid-grid-xs-2-31"
           >
             
           </div>

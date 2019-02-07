@@ -5,7 +5,7 @@ import Button from "@material-ui/core/Button";
 const GeneratorButton = props => {
   return (
     <Fragment>
-      <Button disabled={!props.length} onClick={props.onClick}>
+      <Button disabled={props.length <= 0} onClick={props.onClick}>
         Generate
       </Button>
     </Fragment>

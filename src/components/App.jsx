@@ -106,8 +106,11 @@ class App extends Component {
   };
 
   numberInputChange = event => {
-    if (event.target.value <= 10000) {
+    if (event.target.value <= 10000 && event.target.value >0 ) {
       this.setState({ generateNumber: event.target.value });
+    } else {
+      console.log('errrrr')
+      this.setState({ error: "Input is above or below limit", generateNumber: event.target.value });
     }
   };
 
@@ -161,9 +164,9 @@ class App extends Component {
                 </Grid>
               </Grid>
 
-              <Grid container justify="center">
+              <Grid container >
                 <br />
-                <span>{error}</span>
+                <span className="error">{error}</span>
                 <br />
               </Grid>
               <Grid container  alignItems="center">

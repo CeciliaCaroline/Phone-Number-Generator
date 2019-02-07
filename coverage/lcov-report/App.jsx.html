@@ -20,14 +20,14 @@
     </h1>
     <div class='clearfix'>
       <div class='fl pad1y space-right2'>
-        <span class="strong">93.02% </span>
+        <span class="strong">93.33% </span>
         <span class="quiet">Statements</span>
-        <span class='fraction'>40/43</span>
+        <span class='fraction'>42/45</span>
       </div>
       <div class='fl pad1y space-right2'>
-        <span class="strong">84.62% </span>
+        <span class="strong">88.46% </span>
         <span class="quiet">Branches</span>
-        <span class='fraction'>22/26</span>
+        <span class='fraction'>23/26</span>
       </div>
       <div class='fl pad1y space-right2'>
         <span class="strong">91.67% </span>
@@ -35,9 +35,9 @@
         <span class='fraction'>11/12</span>
       </div>
       <div class='fl pad1y space-right2'>
-        <span class="strong">92.86% </span>
+        <span class="strong">93.18% </span>
         <span class="quiet">Lines</span>
-        <span class='fraction'>39/42</span>
+        <span class='fraction'>41/44</span>
       </div>
     </div>
   </div>
@@ -248,7 +248,10 @@
 203
 204
 205
-206</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+206
+207
+208
+209</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -287,12 +290,12 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">11x</span>
+<span class="cline-any cline-yes">12x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">11x</span>
+<span class="cline-any cline-yes">12x</span>
 <span class="cline-any cline-yes">10x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">11x</span>
+<span class="cline-any cline-yes">12x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -301,10 +304,10 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">26x</span>
-<span class="cline-any cline-yes">26x</span>
-<span class="cline-any cline-yes">3x</span>
-<span class="cline-any cline-yes">10x</span>
+<span class="cline-any cline-yes">28x</span>
+<span class="cline-any cline-yes">28x</span>
+<span class="cline-any cline-yes">27x</span>
+<span class="cline-any cline-yes">22x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -356,6 +359,9 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -373,21 +379,21 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">26x</span>
+<span class="cline-any cline-yes">28x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">26x</span>
+<span class="cline-any cline-yes">28x</span>
 <span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">24x</span>
-<span class="cline-any cline-yes">24x</span>
-<span class="cline-any cline-yes">24x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">26x</span>
+<span class="cline-any cline-yes">26x</span>
+<span class="cline-any cline-yes">26x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">28x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -506,8 +512,8 @@ class App extends Component {
   };
 &nbsp;
   renderPhoneNumbers = () =&gt; {
-    const { randomPhoneNumbers, generateNumber } = this.state;
-    if (randomPhoneNumbers &amp;&amp; generateNumber &gt; 0) {
+    const { randomPhoneNumbers} = this.state;
+    if (randomPhoneNumbers ) {
       return randomPhoneNumbers.map((UniqueNumber, id) =&gt; {
         return (
           &lt;TableRow key={id}&gt;
@@ -561,8 +567,11 @@ class App extends Component {
   };
 &nbsp;
   numberInputChange = event =&gt; {
-    <span class="missing-if-branch" title="else path not taken" >E</span>if (event.target.value &lt;= 10000) {
+    if (event.target.value &lt;= 10000 &amp;&amp; event.target.value &gt;0 ) {
       this.setState({ generateNumber: event.target.value });
+    } else {
+      console.log('errrrr')
+      this.setState({ error: "Input is above or below limit", generateNumber: event.target.value });
     }
   };
 &nbsp;
@@ -600,8 +609,8 @@ class App extends Component {
               &lt;Grid container justify="center"&gt;
                 &lt;h3&gt;Random Phone Number Generator&lt;/h3&gt;
               &lt;/Grid&gt;
-              &lt;Grid container&gt;
-                &lt;Grid item xs={8}&gt;
+              &lt;Grid container justify='space-evenly'&gt;
+                &lt;Grid item xs={9}&gt;
                   &lt;GeneratorInput
                     onChange={this.numberInputChange}
                     input={generateNumber}
@@ -616,16 +625,16 @@ class App extends Component {
                 &lt;/Grid&gt;
               &lt;/Grid&gt;
 &nbsp;
-              &lt;Grid container justify="center"&gt;
+              &lt;Grid container &gt;
                 &lt;br /&gt;
-                &lt;span&gt;{error}&lt;/span&gt;
+                &lt;span className="error"&gt;{error}&lt;/span&gt;
                 &lt;br /&gt;
               &lt;/Grid&gt;
-              &lt;Grid container alignItems="center"&gt;
-                &lt;Grid item xs={6}&gt;
+              &lt;Grid container  alignItems="center"&gt;
+                &lt;Grid item xs={7}&gt;
                   &lt;Sorting sorted={sort} onChange={this.setSort} /&gt;
                 &lt;/Grid&gt;
-                &lt;Grid item xs={3}&gt;
+                &lt;Grid item xs={2}&gt;
                   &lt;DownLoadButton
                     onClick={this.downloadNumbers}
                     randomPhoneNumbers={randomPhoneNumbers}
@@ -664,7 +673,7 @@ export default App;
 </div><!-- /wrapper -->
 <div class='footer quiet pad2 space-top1 center small'>
   Code coverage
-  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Thu Feb 07 2019 11:44:57 GMT+0300 (EAT)
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Thu Feb 07 2019 12:31:55 GMT+0300 (EAT)
 </div>
 </div>
 <script src="prettify.js"></script>
