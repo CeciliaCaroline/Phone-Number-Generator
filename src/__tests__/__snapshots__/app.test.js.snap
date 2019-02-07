@@ -169,7 +169,7 @@ exports[`App renders correctly 1`] = `
           className="MuiGrid-container-1"
         >
           <div
-            className="MuiGrid-item-2 MuiGrid-grid-xs-6-35"
+            className="MuiGrid-item-2 MuiGrid-grid-xs-12-41"
           >
             <p
               style={
