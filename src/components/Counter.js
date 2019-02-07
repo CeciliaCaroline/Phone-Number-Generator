@@ -4,10 +4,10 @@ const Counter = (props) => {
     return (
         <Fragment>
           <p style={{ display: "inline-block", width: "auto", padding: "1%" }}>
-            <b>Max: </b> {props.max}
+            <b>Max: </b> {`0${props.max}`}
           </p>
           <p style={{ display: "inline-block", width: "auto", padding: "1%" }}>
-            <b>Min: </b> {props.min}
+            <b>Min: </b> {`0${props.min}`}
           </p>
           <p style={{ display: "inline-block", width: "auto", padding: "1%" }}>
             <b>Total: </b> {props.total}

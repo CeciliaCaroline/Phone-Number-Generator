@@ -39,7 +39,7 @@ class App extends Component {
       let randomNumber =
         Math.floor(Math.random() * 9999999999 + 100000000) + 100000000;
 
-      if (String(randomNumber).length === 10) {
+      if (String(randomNumber).length === 9) {
         Generated.add(`0${randomNumber}`);
       }
       uniqueNumber = Array.from(Generated);
