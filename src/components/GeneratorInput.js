@@ -9,7 +9,7 @@ const GeneratorInput = (props) => {
             value={props.input}
             onChange={props.onChange}
             fullWidth={true}
-            placeholder="Enter number between 0 and 10000"
+            placeholder="Enter number between 1 and 10000"
             name="generateNumber"
           />
       

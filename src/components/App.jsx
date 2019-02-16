@@ -21,10 +21,11 @@ class App extends Component {
     randomPhoneNumbers: [],
     sort: "",
     generatedNumbers: [],
-    max: null,
-    min: null,
-    total: null,
-    error: null
+    max: 0,
+    min: 0,
+    total: 0,
+    error: null,
+    count: 0
   };
   randomGenerator = async () => {
     let Generated = new Set();
@@ -48,12 +49,14 @@ class App extends Component {
         
         this.setState({
           randomPhoneNumbers: uniqueNumber,
-          generatedNumbers: generatedNumbers.concat(uniqueNumber)
-        });
+          generatedNumbers: generatedNumbers.concat(uniqueNumber),
+          
+          
+        }, () => this.setStatistics());
 
       }
     }
-   
+
   };
 
   renderPhoneNumbers = () => {
@@ -108,7 +111,7 @@ class App extends Component {
   };
 
   clearNumbers = () => {
-    this.setState({ randomPhoneNumbers: [], generateNumber: "" });
+    this.setState({ randomPhoneNumbers: [], generateNumber: ""});
   };
 
   numberInputChange = event => {
@@ -124,30 +127,37 @@ class App extends Component {
     this.setState({ sort: event.target.value }, () => this.sortGenerated());
   };
 
-  render() {
+  setStatistics = () => {
     const {
       generatedNumbers,
+      randomPhoneNumbers,
+     
+    } = this.state;
+   
+    if (generatedNumbers.length > 0) {
+      this.setState({
+        max: Math.max(...generatedNumbers),
+        min: Math.min(...generatedNumbers),
+        total: generatedNumbers.length,
+        count: randomPhoneNumbers.length
+      })
+   
+    }
+  }
+
+  render() {
+    const {
       generateNumber,
       error,
       sort,
-      randomPhoneNumbers
+      randomPhoneNumbers,
+      max,
+      min,
+      total,
+      count
     } = this.state;
-    let max;
-    let min;
-    let total;
-    let count;
-    if (generatedNumbers.length > 0) {
-      max = Math.max(...generatedNumbers);
-      min = Math.min(...generatedNumbers);
-      total = generatedNumbers.length;
-      count = randomPhoneNumbers.length;
-    } else {
-      max = 0;
-      min = 0;
-      total = 0;
-      count = 0;
-    }
-
+   
+  
     return (
       <Grid container justify="center">
         <Grid item xs={11}>
