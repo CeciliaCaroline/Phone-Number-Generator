@@ -33,21 +33,27 @@ class App extends Component {
 
     if (generateNumber <= 0 || generateNumber > 10000) {
       this.setState({ error: "Input is above or below limit" });
-    }
+    } 
+      this.setState({ error: "" });
+
+    
 
     while (Generated.size < generateNumber) {
       let randomNumber =
-       await Math.floor(Math.random() * 9999999999 + 100000000) + 100000000;
+       Math.floor(Math.random() * 9999999999 + 100000000) + 100000000;
 
       if (String(randomNumber).length === 9) {
         Generated.add(`0${randomNumber}`);
+        uniqueNumber = Array.from(Generated);
+        
+        this.setState({
+          randomPhoneNumbers: uniqueNumber,
+          generatedNumbers: generatedNumbers.concat(uniqueNumber)
+        });
+
       }
-      uniqueNumber = Array.from(Generated);
     }
-    this.setState({
-      randomPhoneNumbers: uniqueNumber,
-      generatedNumbers: generatedNumbers.concat(uniqueNumber)
-    });
+   
   };
 
   renderPhoneNumbers = () => {
@@ -107,7 +113,7 @@ class App extends Component {
 
   numberInputChange = event => {
     if (event.target.value <= 10000 && event.target.value >0 ) {
-      this.setState({ generateNumber: event.target.value });
+      this.setState({ generateNumber: event.target.value, error: "" });
     } else {
       this.setState({ error: "Input is above or below limit", generateNumber: event.target.value });
     }
@@ -129,14 +135,17 @@ class App extends Component {
     let max;
     let min;
     let total;
+    let count;
     if (generatedNumbers.length > 0) {
       max = Math.max(...generatedNumbers);
       min = Math.min(...generatedNumbers);
       total = generatedNumbers.length;
+      count = randomPhoneNumbers.length;
     } else {
       max = 0;
       min = 0;
       total = 0;
+      count = 0;
     }
 
     return (
@@ -187,7 +196,7 @@ class App extends Component {
               </Grid>
               <Grid container>
                 <Grid item xs={12}>
-                  <Counter min={min} max={max} total={total} />
+                  <Counter min={min} max={max} total={total} count={count} />
                 </Grid>
               </Grid>
 

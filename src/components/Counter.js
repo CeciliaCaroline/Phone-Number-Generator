@@ -10,6 +10,9 @@ const Counter = (props) => {
             <b>Min: </b> {`0${props.min}`}
           </p>
           <p style={{ display: "inline-block", width: "auto", padding: "1%" }}>
+            <b>Count: </b> {props.count}
+          </p>
+          <p style={{ display: "inline-block", width: "auto", padding: "1%" }}>
             <b>Total: </b> {props.total}
           </p>
           
